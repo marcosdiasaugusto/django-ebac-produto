@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Meu Site</title>
+    </head>
+    <body>
+        <h1>Lista de Produtos</h1>
+        {% if lista %}
+            <ul>
+                {% for cada in lista %}
+                    <li>{{ cada.nome }} ( {{ cada.quantidade }} )</li>
+                {%  endfor %}
+            </ul>
+        {% else %}
+            <p>Nao tem nenhum produto.</p>
+        {% endif %}
+    </body>
+</html>
